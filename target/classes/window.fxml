@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Controller">
+
+
+
+    <HBox VBox.vgrow="ALWAYS">
+
+        <TextArea fx:id="txtArea" editable="false" wrapText="true" HBox.hgrow="ALWAYS" />
+        <VBox prefHeight="182.0" prefWidth="93">
+            <Button onAction="#remove" prefHeight="26.0" prefWidth="92" text="Удалить" />
+
+            <Button onAction="#add" prefHeight="26.0" prefWidth="92" text="Добавить">
+
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin></Button>
+            <Button onAction="#getMedicine" prefHeight="26.0" prefWidth="92" text="Получить">
+                <VBox.margin>
+                    <Insets top="10.0" />
+                </VBox.margin></Button>
+        </VBox>
+    </HBox>
+
+
+    <HBox fx:id="msgBox">
+        <TextField fx:id="msgField" onAction="#find" promptText="Введите сообщение" HBox.hgrow="ALWAYS" />
+        <Button onAction="#find" text="Найти" />
+    </HBox>
+
+</VBox>
